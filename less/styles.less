@@ -1,0 +1,151 @@
+@theme--color: #1abc9c;
+
+html {
+box-sizing: border-box;
+}
+
+* {
+box-sizing: inherit;
+}
+
+h1{
+  font-size: 46px;
+}
+h2{
+  font-size: 38px;
+}
+h3{
+  font-size: 32px;
+}
+nav{
+  position: fixed;
+  z-index: 3;
+  background-color: #fff;
+  width: 100%;
+}
+.nav{
+  padding: 20px 0;
+
+}
+.menu{
+  list-style: none;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: flex-end;
+  &__item{
+    margin-left: 40px;
+  }
+  &__link{
+      color:#a3a3a3;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight:500;
+      &:hover{
+        color: @theme--color;
+        text-decoration: none;
+      }
+    }
+  &__icon{
+    display: none;
+    width: 45px;
+    height: 35px;
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    span{
+      display: block;
+      position: absolute;
+      height: 6px;
+      width: 100%;
+      background: #333333;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+      &:nth-child(1) {
+        top: 0px;
+        }
+      &:nth-child(2),  &:nth-child(3){
+        top: 10px;
+        }
+      &:nth-child(4) {
+        top: 20px;
+        }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .menu__icon{
+    display: inline-block;
+
+  }
+
+  .menu {
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-top: 60px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    overflow: auto;
+
+  }
+  .nav{
+    position: relative;
+  }
+
+  .menu__item {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+
+/*HOME*/
+
+.home{
+  background-color: #e2e2e2;
+  min-height: 100vh;
+  text-align: center;
+  &__title{
+    padding-top: 20%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+
+  }
+  &__links{
+    padding-top: 40px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+    a{
+      color: #fff;
+      font-size: 22px;
+      padding: 5px;
+      background-color: #939393;
+      margin: 0 5px;
+      border-radius: 5px;
+      &:hover{
+        text-decoration: none;
+        color: #000;
+        transition: .3s;
+      }
+    }
+}
+}
