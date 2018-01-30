@@ -1,5 +1,19 @@
 $(document).ready(function() {
 
+//  Menu Active
+
+  $(function () {
+    $('.menu a').each(function () {
+        var location = window.location.href;
+        var link = this.href;
+        if(location == link) {
+            $(this).addClass('active_menu');
+        }
+    });
+});
+
+
+//  NAV-ICON
 
   $(function() {
     $('.nav__icon').on('click', function() {
