@@ -7,6 +7,30 @@ $(document).ready(function() {
     });
   });
 
+//Owl CAROUSEL
 
+  $(function() {
+$(".owl-carousel").owlCarousel();
+});
+
+  $('.owl-carousel').owlCarousel({
+    center: true,
+    items:2,
+    loop:true,
+    margin:10,
+
+    responsive:{
+        0:{
+            items:1,
+
+        },
+        600:{
+            items:2,
+        },
+        1000:{
+            items:3,
+        }
+    }
+});
 
 });
