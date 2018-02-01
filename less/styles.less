@@ -1,5 +1,6 @@
 @theme--color: #1abc9c;
 @theme--color2: #efefef;
+@body--color: #505050;
 
 html {
 box-sizing: border-box;
@@ -45,8 +46,7 @@ h4{
     }
 }
 nav{
-  position: fixed;
-  z-index: 3;
+  
   background-color: #fff;
   width: 100%;
 }
@@ -183,10 +183,10 @@ nav{
 
 .home{
   background-color: @theme--color2;
-  height: 100vh;
+  padding: 20% 0;
   text-align: center;
   &__title{
-    padding-top: 30%;
+    
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -213,7 +213,7 @@ nav{
       border-radius: 5px;
       &:hover{
         text-decoration: none;
-        color: #000;
+        color: #1abc9c;
         transition: .3s;
       }
     }
@@ -385,15 +385,21 @@ footer{
 
 
 
-//BLOPG-PAGE
+//BLOG-PAGE
 
 .blog-page{
-  padding-top: 10%;
+  padding: 0 0  0 40px;
   background-color: @theme--color2;
+  h2{
+    margin-top: 60px;
+  }
 
 }
 .blog-box{
   margin-top: 50px;
+  padding-bottom: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
   &__img{
     width: 100%;
     img{
@@ -426,5 +432,142 @@ footer{
       
     }
 
+  }
+}
+
+
+.blog-sidebar{
+  padding-top: 20px;
+  padding-left: 40px;
+  background-color: #a7a7a7;
+  height: 100%;
+  padding-top: 60px;
+  color: #fff;
+}
+
+
+//BLOG_ARTICLES
+
+.blog-articles{
+  background-color: @theme--color2;
+  h2{
+    margin-top: 60px;
+  }
+} 
+.articles-bar{
+  margin-top: 40px;
+  font-size: 18px;
+  
+  span{
+    padding: 10px;
+    i{
+      padding-right: 5px;
+    }
+    a{
+    color:@body--color; 
+    
+    }
+  }
+}
+
+.articles-img{
+  position: relative;
+  padding-bottom: 56.25%; 
+  padding-top: 0;
+  margin-top: 60px;
+  height: 0;
+  overflow: hidden;
+  img, iframe{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 95%;
+    height: 95%;
+    
+  }
+}
+.article-comments{
+  padding: 60px 15px ;
+  input, textarea{
+    width: 90%;
+    height: 50px;
+    margin-top: 20px;
+  }
+  textarea{
+    height: 150px;
+  }
+  button{
+    background-color: @theme--color;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 40px;
+    display: inline-block;
+  }
+}
+
+
+//CONTACTS_PAGE
+
+.contacts-page{
+  background-color: @theme--color2;
+  h2{
+    margin-top: 60px;
+  }
+  h4{
+    margin-top: 40px;
+  }
+  .contacts-box{
+    padding-bottom: 60px;
+  }
+}
+.contacts-info{
+  padding: 15px;
+  padding-top: 40px;
+  h3{
+    
+  }
+}
+.contacts-items{
+  li{
+    padding-top: 15px;
+    i{
+      padding-top: 10px;
+      font-size: 26px;
+      color: @theme--color;
+    }
+    a{
+        color: @body--color;
+      &:hover{
+        color: @theme--color;
+      }
+      }
+  }
+}
+.contacts-form{
+  padding: 15px;
+  padding-top: 40px;
+  input, textarea{
+    margin-top: 20px;
+    width: 80%;
+    height: 50px;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  textarea{
+    height: 150px;
+  }
+  input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+  }
+  button{
+    padding: 10px 30px;
+    background-color: @theme--color;
+    color: #fff;
+    border-radius: 5px;
+    &:hover{
+      background-color: #189f84;
+    }
   }
 }
