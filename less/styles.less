@@ -96,10 +96,14 @@ nav{
     margin-left: 40px;
   }
   &__link{
-      color:#a3a3a3;
+      color: #6c6969; 
+    
       text-transform: uppercase;
       font-size: 18px;
       font-weight:700;
+      @media screen and (max-width: 767px){
+        color: #f4f4f4;
+      }
       &:hover{
         color: @theme--color;
         text-decoration: none;
@@ -208,12 +212,12 @@ nav{
       color: #fff;
       font-size: 22px;
       padding: 5px;
-      background-color: #939393;
-      margin: 0 5px;
+      background-color: @theme--color;
+      margin: 0 10px;
       border-radius: 5px;
       &:hover{
         text-decoration: none;
-        color: #1abc9c;
+        color: #151515;
         transition: .3s;
       }
     }
@@ -514,8 +518,12 @@ footer{
   h2{
     margin-top: 60px;
   }
-  h4{
+  .h4-top{
+    margin: 0 auto;
     margin-top: 40px;
+    text-align: center;
+    width: 70%;
+    display: block;
   }
   .contacts-box{
     padding-bottom: 60px;
@@ -524,11 +532,19 @@ footer{
 .contacts-info{
   padding: 15px;
   padding-top: 40px;
+  .home__links{
+    padding-top: 35px;  
+    justify-content: flex-start;
+  }
   h3{
     
   }
+  h4{
+    margin-top: 40px;
+  }
 }
 .contacts-items{
+  
   li{
     padding-top: 15px;
     i{
@@ -538,6 +554,7 @@ footer{
     }
     a{
         color: @body--color;
+      font-size: 20px;
       &:hover{
         color: @theme--color;
       }
